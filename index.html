@@ -1,0 +1,85 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Calculator App</title>
+  <link rel="stylesheet" href="./assets/css/variable.css">
+  <link rel="stylesheet" href="./assets/css/base.css">
+  <link rel="stylesheet" href="./assets/css/main.css">
+</head>
+
+<body>
+
+  <main>
+
+    <div class="main-page">
+      <div class="container">
+
+        <header>
+          <h2>calc</h2>
+          <div class="head-theme">
+            <label for="theme">theme</label>
+            <div class="switch" id="status">
+              <input name="switch" id="one" type="radio" value="1" checked />
+              <label for="one" class="switch__label">1</label>
+              <input name="switch" id="two" type="radio" value="2" />
+              <label for="two" class="switch__label">2</label>
+              <input name="switch" id="three" type="radio" value="3" />
+              <label for="three" class="switch__label">3</label>
+              <div class="switch__indicator"></div>
+            </div>
+          </div>
+        </header>
+
+        <div class="calculator-wrapper">
+          <form name="form1">
+            <div class="value">
+              <input type="text" name="textview" class="textview">
+            </div>
+            <div class="calculator-grid">
+              <input class="primary-btn" type="button" value="7" onclick="insert(7)">
+              <input class="primary-btn" type="button" value="8" onclick="insert(8)">
+              <input class="primary-btn" type="button" value="9" onclick="insert(9)">
+              <input class="clear-btn" type="button" value="Del" onclick="backspace()">
+
+              <input class="primary-btn" type="button" value="4" onclick="insert(4)">
+              <input class="primary-btn" type="button" value="5" onclick="insert(5)">
+              <input class="primary-btn" type="button" value="6" onclick="insert(6)">
+              <input class="primary-btn" type="button" value="+" onclick="insert('+')">
+
+              <input class="primary-btn" type="button" value="1" onclick="insert(1)">
+              <input class="primary-btn" type="button" value="2" onclick="insert(2)">
+              <input class="primary-btn" type="button" value="3" onclick="insert(3)">
+              <input class="primary-btn" type="button" value="-" onclick="insert('-')">
+
+              <input class="primary-btn" type="button" value="." onclick="insert('.')">
+              <input class="primary-btn" type="button" value="0" onclick="insert(0)">
+              <input class="primary-btn" type="button" value="/" onclick="insert('/')">
+              <input class="primary-btn" type="button" value="x" onclick="insert('*')">
+
+              <input class="span-2 clear-btn" type="button" value="Reset" onclick="form1.textview.value = ' ' ">
+              <input class="span-2 equal-btn" type="button" value="=" onclick="equal()">
+
+            </div>
+          </form>
+        </div>
+
+      </div>
+    </div>
+
+    <footer>
+      <div class="copyrights">
+        Challenge by <a href="https://www.frontendmentor.io?ref=challenge" target="_blank">Frontend Mentor</a>.
+        Coded by <a href="mailto:khyatijethava35@gmail.com">Khyati Jethva</a>.
+      </div>
+    </footer>
+
+  </main>
+
+  <script src="./assets/js/script.js"></script>
+
+</body>
+
+</html>
